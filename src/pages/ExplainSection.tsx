@@ -1,88 +1,173 @@
 import React from "react";
-import { Typography, Stack, Grid } from "@mui/material";
-import { CheckCircle, AccessTime, DocumentScanner } from "@mui/icons-material";
-import image from "../assets/explainImage.jpg";
+import {
+  Typography,
+  Grid,
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from "@mui/material";
+import {
+  ExpandMore as ExpandMoreIcon,
+  Spa as SpaIcon,
+  AccountBalance as LawyerIcon,
+  FamilyRestroom as DivorceIcon,
+} from "@mui/icons-material";
+import image from "../assets/advImage.jpg";
 
 const ExplainSection: React.FC = () => {
+  // Array de objetos contendo os dados de cada accordion
+  const accordionData = [
+    {
+      title: "Divórcio Judicial",
+      icon: <DivorceIcon sx={{ verticalAlign: "middle", mr: 1 }} />,
+      description: (
+        <>
+          O divórcio judicial é o meio legal para formalizar o fim do casamento.
+          Ele pode acontecer de duas formas:
+          <br />
+          <b>- Divórcio Consensual:</b> Acordo mútuo, rápido e menos custoso.
+          <br />
+          <b>- Divórcio Litigioso:</b> Conflito, pode envolver disputas
+          judiciais.
+        </>
+      ),
+      backgroundColor: "#000", // Cor do primeiro accordion
+    },
+    {
+      title: "Divórcio Extrajudicial",
+      icon: <SpaIcon sx={{ verticalAlign: "middle", mr: 1 }} />,
+      description: (
+        <>
+          O divórcio extrajudicial é o meio administrativo para por fim ao
+          casamento sem intervenção judicial.
+        </>
+      ),
+      backgroundColor: "#000", // Cor dos outros accordions
+    },
+    {
+      title: "Importância de ter um Especialista",
+      icon: <LawyerIcon sx={{ verticalAlign: "middle", mr: 1 }} />,
+      description: (
+        <>
+          Contar com um <b>ADVOGADO ESPECIALIZADO</b> faz toda a diferença!
+          Garantimos que todos os seus direitos sejam respeitados, evitando
+          preocupações e potenciais prejuízos.
+        </>
+      ),
+      backgroundColor: "#000", // Cor dos outros accordions
+    },
+  ];
+
   return (
     <Grid
       container
       sx={{
         backgroundColor: "#000",
+        color: "#fff",
         textAlign: "center",
-        minHeight: "50vh",
+        minHeight: "70vh",
+        py: 6,
+        px: 2,
       }}
     >
       <Grid
         item
         xs={12}
         md={6}
-        sx={{ py: 8 }}
-        display={"flex"}
-        flexDirection={"column"}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          alignItems: "center",
+          p: 3,
+        }}
       >
         <Typography
-          variant="h2"
+          variant="h3"
           sx={{
             fontWeight: "bold",
+            color: "#fff",
             mb: 4,
-            mt: 2,
-            color: "#FFFFFF",
           }}
         >
-          Como Funciona?
+          Tipos de Divórcio
         </Typography>
 
-        <Stack
-          spacing={2}
+        <Card
           sx={{
-            px: 2,
-            textAlign: "left",
-            flexGrow: 1,
-            justifyContent: "space-around",
-            height: "100%",
+            width: "100%",
+            backgroundColor: "#000",
+            color: "#fff",
+            boxShadow: 3,
+            mb: 4,
           }}
         >
-          <Stack direction="row" spacing={2} alignItems="center">
-            <CheckCircle sx={{ color: "#34D399", fontSize: 30 }} />
-            <Typography variant="body1" sx={{ color: "#FFFFFF" }}>
-              Se você foi surpreendido por uma multa de trânsito ou foi
-              notificado sobre a suspensão ou cassação da sua CNH, saiba que
-              muitas vezes é possível recorrer.
-            </Typography>
-          </Stack>
+          <CardContent>
+            {/* Iterando sobre o array de dados para renderizar os accordions */}
+            {accordionData.map((item, index) => (
+              <Accordion
+                key={index} // key é importante para performance do React
+                sx={{
+                  backgroundColor: item.backgroundColor,
+                  color: "#fff",
+                  mb: 2,
+                }}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
+                  aria-controls={`panel${index}-content`} // Acessibilidade
+                  id={`panel${index}-header`} // Acessibilidade
+                >
+                  <Typography>
+                    {item.icon} {/* Ícone do accordion */}
+                    {item.title} {/* Título do accordion */}
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography variant="body2" sx={{ color: "#ddd" }}>
+                    {item.description} {/* Descrição detalhada */}
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            ))}
+          </CardContent>
+        </Card>
 
-          <Stack direction="row" spacing={2} alignItems="center">
-            <DocumentScanner sx={{ color: "#34D399", fontSize: 30 }} />
-            <Typography variant="body1" sx={{ color: "#FFFFFF" }}>
-              Você envia o AIT (Auto de Infração de Trânsito) ou a Notificação
-              de Penalidade e explica brevemente sua situação.
-            </Typography>
-          </Stack>
-
-          <Stack direction="row" spacing={2} alignItems="center">
-            <AccessTime sx={{ color: "#34D399", fontSize: 30 }} />
-            <Typography variant="body1" sx={{ color: "#FFFFFF" }}>
-              Em pouco tempo receberá uma devolutiva e saberá se sua multa
-              poderá ser anulada.
-            </Typography>
-          </Stack>
-        </Stack>
+        <Button
+          variant="contained"
+          sx={{
+            mt: 2,
+          }}
+        >
+          Agende agora uma reunião sem compromisso
+        </Button>
       </Grid>
 
       <Grid
         item
         xs={12}
         md={6}
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          borderLeft: { md: "2px solid #388E3C" },
+          borderTop: { xs: "2px solid #388E3C", md: "none" },
+          mt: { xs: 4, md: 0 },
+        }}
       >
         <img
           src={image}
-          alt="Ilustração de trânsito"
+          alt="Ilustração sobre divórcio"
           style={{
-            maxWidth: "100%",
-            height: "100%",
-            borderRadius: "8px",
+            maxWidth: "90%",
+            height: "auto",
+            borderRadius: "12px",
+            boxShadow: "0 0 15px rgba(0, 0, 0, 0.3)",
           }}
         />
       </Grid>

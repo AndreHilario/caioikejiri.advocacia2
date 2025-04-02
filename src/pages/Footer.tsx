@@ -16,6 +16,7 @@ const FooterDesktop: React.FC = () => {
         display: "flex",
         flexDirection: "row-reverse",
         minHeight: "40vh",
+        borderTop: "1px solid #fff"
       }}
     >
       <Box
@@ -44,13 +45,15 @@ const FooterDesktop: React.FC = () => {
               justifyContent="center"
               alignItems="center"
             >
-              <Typography variant="h4">CAIO IKEJIRI</Typography>
-              <Typography variant="h4"> ADVOGADO | OAB/SP: 511.392</Typography>
+              <Typography variant="h4">Caio Alves de Faria</Typography>
+              <Typography variant="h4"> ADVOGADO | OAB/SP 517.011</Typography>
             </Stack>
           </Box>
           <Box textAlign="center">
-            <Typography variant="h4" sx={{ p: 2 }}>
-              DEFENDA SEUS DIREITOS
+            <Typography variant="body2" sx={{ p: 2, mt: 6 }}>
+              <b>Conte conosco para te ajudar</b> <br />neste momento sensível,
+              trabalhamos de forma humanizada <br />e eficiente em prol dos seus
+              direitos!
             </Typography>
             <Button
               variant="contained"
@@ -73,17 +76,8 @@ const FooterDesktop: React.FC = () => {
         </Stack>
 
         <Box sx={{ mb: 1, width: "100%" }} textAlign="center">
-          <Box
-            sx={{
-              height: 2,
-              width: "100%",
-              background:
-                "linear-gradient(to right, rgba(52, 211, 153, 0.2) 0%, #34D399 50%, rgba(52, 211, 153, 0.2) 100%)",
-              mb: 1,
-            }}
-          />
           <Typography variant="caption" sx={{ color: "#A0A0A0" }}>
-            © 2025 CaioIkejiri | Todos os direitos reservados
+            © 2025 CaioAlves | Todos os direitos reservados
           </Typography>
         </Box>
       </Box>
@@ -100,11 +94,13 @@ const FooterMobile: React.FC = () => {
         backgroundColor: "#000",
         color: "white",
         textAlign: "center",
+        borderTop: "1px solid #fff"
       }}
     >
       <Box sx={{ py: 4 }}>
-        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 2, px: 4 }}>
-          DEFENDA SEUS DIREITOS
+        <Typography variant="body2" sx={{ mb: 2, px: 4 }}>
+          <b>Conte conosco para te ajudar</b> neste momento sensível,
+          trabalhamos de forma humanizada e eficiente em prol dos seus direitos!
         </Typography>
         <Button
           variant="contained"
@@ -115,34 +111,25 @@ const FooterMobile: React.FC = () => {
           }
           sx={{
             transition: "transform 0.2s ease-in-out",
-            padding: "8px 32px",
+            padding: "12px 32px", // Aumenta o padding vertical
           }}
         >
-          Entre em contato!
+          Agende agora uma reunião!
         </Button>
       </Box>
       <Box mb={3}>
         <Box>
           <Typography fontSize={"15px"} sx={{ fontWeight: "bold" }}>
-            CAIO IKEJIRI | ADVOGADO
+            CAIO ALVES DE FARIA | ADVOGADO
             <br />
-            OAB/SP: 511.392
+            OAB/SP 517.011
           </Typography>
         </Box>
       </Box>
       <Box sx={{ width: "100%", pb: 2 }}>
-        <Box
-          sx={{
-            height: 2,
-            width: "100%",
-            background:
-              "linear-gradient(to right, rgba(52, 211, 153, 0.2) 0%, #34D399 50%, rgba(52, 211, 153, 0.2) 100%)",
-            mb: 1.5,
-          }}
-        />
         <Stack direction="row" justifyContent="center" alignItems="center">
           <Typography variant="caption" sx={{ color: "#A0A0A0" }}>
-            © 2025 CaioIkejiri | Todos os direitos reservados
+            © 2025 CaioAlves | Todos os direitos reservados
           </Typography>
         </Stack>
       </Box>

@@ -1,6 +1,6 @@
 export const muiTypography = {
   allVariants: {
-    fontFamily: "Plus Jakarta Sans, sans-serif",
+    fontFamily: "Poppins, sans-serif",
   },
   h1: { fontSize: "48px", fontWeight: "bold", lineHeight: "47px" },
   h2: { fontSize: "30px", fontWeight: "600", lineHeight: "41px" },
