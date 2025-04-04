@@ -261,7 +261,7 @@ const ExplainSectionMobile: React.FC = () => {
       }}
     >
       <Grid item xs={12}>
-        <Typography variant="h5" mb={2}>
+        <Typography variant="h5" mb={2} mt={2}>
           Tipos de Divórcio
         </Typography>
         {accordionData.map((item, index) => (
@@ -287,14 +287,14 @@ const ExplainSectionMobile: React.FC = () => {
             </AccordionDetails>
           </Accordion>
         ))}
-        <Box sx={{ border: "2px solid #fff" }} />
-        <Typography variant="h5" mt={4} mb={2}>
+        {/* <Box sx={{ border: "1px solid #fff" }} mt={2} /> */}
+        <Typography variant="h5" mt={6} mb={2}>
           Perguntas Frequentes
         </Typography>
         {accordionDataMobile.map((item, index) => (
           <Accordion
             key={index}
-            sx={{ backgroundColor: item.backgroundColor, color: "#fff", mb: 2 }}
+            sx={{ backgroundColor: item.backgroundColor, color: "#fff", mb: 6 }}
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
