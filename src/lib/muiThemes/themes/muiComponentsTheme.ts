@@ -38,12 +38,12 @@ export const muiComponents = createTheme({
     MuiTabs: {
       styleOverrides: {
         root: {
-          color: "#FFFFFF",
-          minHeight: "48px",
+          backgroundColor: "#000",
           marginBottom: "15px",
         },
         indicator: {
           height: "3px",
+          backgroundColor: "#2E7D32",
         },
         flexContainer: {
           justifyContent: "center",
@@ -53,16 +53,17 @@ export const muiComponents = createTheme({
     MuiTab: {
       styleOverrides: {
         root: {
-          fontWeight: 700, // Mesmo peso do <strong>
+          fontWeight: 700, 
           padding: "12px 16px",
+          color: "#fff",
           borderRadius: "8px",
           "&.Mui-selected": {
-            color: "#000", // Cor do item selecionado
+            color: "#388E3C",
           },
         },
       },
       defaultProps: {
-        disableRipple: true, // Remove efeito de ripple ao clicar
+        disableRipple: true,
       },
     },
     MuiSelect: {

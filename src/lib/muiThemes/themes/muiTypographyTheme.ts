@@ -4,7 +4,7 @@ export const muiTypography = {
   },
   h1: { fontSize: "48px", fontWeight: "bold", lineHeight: "47px" },
   h2: { fontSize: "30px", fontWeight: "600", lineHeight: "41px" },
-  h3: { fontSize: "24px", fontWeight: "bold", lineHeight: "34px" },
+  h3: { fontSize: "24px", fontWeight: "bold", lineHeight: "42px" },
   h4: { fontSize: "22px", fontWeight: "600", lineHeight: "34px" },
   h5: { fontSize: "20px", fontWeight: "bold", lineHeight: "32px" },
   h6: { fontSize: "16px", fontWeight: "600", lineHeight: "22px" },

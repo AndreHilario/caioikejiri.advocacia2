@@ -22,7 +22,7 @@ const Header: React.FC = () => {
 
         <Button
           variant="contained"
-          href="https://wa.me/5512997402160"
+          href="https://wa.me/5512992485894"
           rel="noopener noreferrer"
           sx={{
             padding: "8px 16px",

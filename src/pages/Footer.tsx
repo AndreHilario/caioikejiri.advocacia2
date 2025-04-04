@@ -16,7 +16,7 @@ const FooterDesktop: React.FC = () => {
         display: "flex",
         flexDirection: "row-reverse",
         minHeight: "40vh",
-        borderTop: "1px solid #fff"
+        borderTop: "1px solid #fff",
       }}
     >
       <Box
@@ -50,14 +50,14 @@ const FooterDesktop: React.FC = () => {
             </Stack>
           </Box>
           <Box textAlign="center">
-            <Typography variant="body2" sx={{ p: 2, mt: 6 }}>
-              <b>Conte conosco para te ajudar</b> <br />neste momento sensível,
-              trabalhamos de forma humanizada <br />e eficiente em prol dos seus
-              direitos!
+            <Typography variant="body2" sx={{ p: 2, mt: 8 }}>
+              <b>Conte conosco para te ajudar</b> <br />
+              neste momento sensível, trabalhamos de forma  <br />humanizada e
+              eficiente em prol dos seus direitos!
             </Typography>
             <Button
               variant="contained"
-              href="https://wa.me/5512997402160"
+              href="https://wa.me/5512992485894"
               rel="noopener noreferrer"
               startIcon={
                 <ChatBubbleOutlineIcon
@@ -70,7 +70,7 @@ const FooterDesktop: React.FC = () => {
                 mb: 2,
               }}
             >
-              Entre em contato!
+              Agende agora uma reunião!
             </Button>
           </Box>
         </Stack>
@@ -94,7 +94,7 @@ const FooterMobile: React.FC = () => {
         backgroundColor: "#000",
         color: "white",
         textAlign: "center",
-        borderTop: "1px solid #fff"
+        borderTop: "1px solid #fff",
       }}
     >
       <Box sx={{ py: 4 }}>
@@ -104,14 +104,14 @@ const FooterMobile: React.FC = () => {
         </Typography>
         <Button
           variant="contained"
-          href="https://wa.me/5512997402160"
+          href="https://wa.me/5512992485894"
           rel="noopener noreferrer"
           startIcon={
             <ChatBubbleOutlineIcon style={{ fontSize: 15, marginRight: 2 }} />
           }
           sx={{
             transition: "transform 0.2s ease-in-out",
-            padding: "12px 32px", // Aumenta o padding vertical
+            padding: "12px 32px",
           }}
         >
           Agende agora uma reunião!

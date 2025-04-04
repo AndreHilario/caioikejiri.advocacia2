@@ -16,7 +16,7 @@ const MainSectionDesktop: React.FC = () => {
     <Box
       sx={{
         backgroundColor: "white",
-        height: "100vh",
+        height: "90vh",
         overflow: "hidden",
         pl: 12,
         pr: 12,
@@ -71,9 +71,10 @@ const MainSectionDesktop: React.FC = () => {
               variant="contained"
               startIcon={<WhatsAppIcon style={{ marginRight: "3px" }} />}
               sx={{ width: "fit-content" }}
+              href="https://wa.me/5512992485894"
             >
               Agende agora uma reunião sem compromisso e descubra <br />a melhor
-              solução para seu problema
+              solução para seu problema!
             </Button>
           </Stack>
         </Grid>
@@ -85,6 +86,10 @@ const MainSectionDesktop: React.FC = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              transition: "transform 0.3s",
+              "&:hover": {
+                transform: "scale(1.02)",
+              },
             }}
           >
             <img
@@ -112,13 +117,13 @@ const MainSectionMobile: React.FC = () => {
         textAlign: "center",
         py: 3, // Aumentei o padding vertical
         px: 3, // Aumentei o padding horizontal
-        minHeight: "80vh", // Ajustei a altura mínima
+        minHeight: "80vh",
       }}
     >
       <Stack spacing={3} alignItems="center" justifyContent="center">
         {/* Título principal */}
         <Typography
-          variant="h5" // Ajustei o tamanho da fonte
+          variant="h2" // Ajustei o tamanho da fonte
           fontWeight="bold"
           sx={{ color: "black", textAlign: "center" }} // Alinhamento à esquerda
         >
@@ -136,7 +141,7 @@ const MainSectionMobile: React.FC = () => {
 
         {/* Frase de destaque */}
         <Typography
-          variant="h6" // Ajustei o tamanho da fonte
+          variant="h4" // Ajustei o tamanho da fonte
           sx={{ fontWeight: "700", color: "black", textAlign: "center" }} // Alinhamento à esquerda
         >
           Seja ele amigável ou não, vamos te auxiliar!
@@ -172,10 +177,7 @@ const MainSectionMobile: React.FC = () => {
         </Typography>
 
         {/* Botão de contato */}
-        <Button
-          variant="contained"
-          startIcon={<WhatsAppIcon />}
-        >
+        <Button variant="contained" startIcon={<WhatsAppIcon />} href="https://wa.me/5512992485894">
           Agende uma reunião sem compromisso
         </Button>
       </Stack>
