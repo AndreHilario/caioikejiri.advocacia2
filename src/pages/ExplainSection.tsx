@@ -22,6 +22,7 @@ import {
 } from "@mui/icons-material";
 import image from "../assets/advImage.jpg";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { generateWhatsappLink } from "../utils/sendWhatsAppMessage";
 
 const accordionData = [
   {
@@ -213,12 +214,14 @@ const ExplainSectionDesktop: React.FC = () => {
         </TabPanel>
         <Button
           variant="contained"
-          startIcon={<WhatsAppIcon />}
-          sx={{ px: 4 }}
-          href="https://wa.me/5512992485894"
+          startIcon={<WhatsAppIcon style={{ marginRight: "3px" }} />}
+          sx={{ width: "fit-content" }}
+          href={generateWhatsappLink(
+            "5512992485894",
+            "Olá! Preciso do auxílio de um Advogado."
+          )}
         >
-          Agende agora uma reunião sem compromisso e descubra <br />a melhor
-          solução para seu problema!
+          Fale comigo
         </Button>
       </Grid>
 
@@ -328,11 +331,14 @@ const ExplainSectionMobile: React.FC = () => {
         />
         <Button
           variant="contained"
-          href="https://wa.me/5512992485894"
-          startIcon={<WhatsAppIcon />}
+          startIcon={<WhatsAppIcon style={{ marginRight: "3px" }} />}
           sx={{ mt: 4, px: 3 }}
+          href={generateWhatsappLink(
+            "5512992485894",
+            "Olá! Preciso do auxílio de um Advogado."
+          )}
         >
-          Agende uma reunião
+          Fale comigo
         </Button>
       </Grid>
     </Grid>

@@ -114,7 +114,7 @@ export const muiComponents = createTheme({
         root: {
           backgroundColor: "#2E7D32",
           borderRadius: "10px",
-          fontSize: "14px",
+          fontSize: "17px",
           letterSpacing: "0.01px",
           minHeight: "50px",
           transition:

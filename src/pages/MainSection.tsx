@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import imagem from "../assets/image.png";
+import { generateWhatsappLink } from "../utils/sendWhatsAppMessage";
 
 const MainSectionDesktop: React.FC = () => {
   return (
@@ -57,25 +58,29 @@ const MainSectionDesktop: React.FC = () => {
               sx={{ color: "gray", fontSize: "1rem" }}
             >
               Você infelizmente deve estar enfrentando um momento delicado e o
-              processo de divórcio pode ser complicado e demorado.
+              processo de divórcio pode ser complicado e demorado!
             </Typography>
             <Typography
               variant="body1"
               sx={{ color: "gray", fontSize: "1rem" }}
             >
               A nossa equipe de advogados está pronta para auxiliar você nesse
-              momento, garantindo seus direitos e protegendo o que é mais
-              importante para você.
+              momento, garantindo seus direitos e protegendo aquilo que é mais
+              valioso para você.
             </Typography>
-            <Button
-              variant="contained"
-              startIcon={<WhatsAppIcon style={{ marginRight: "3px" }} />}
-              sx={{ width: "fit-content" }}
-              href="https://wa.me/5512992485894"
-            >
-              Agende agora uma reunião sem compromisso e descubra <br />a melhor
-              solução para seu problema!
-            </Button>
+            <Box>
+              <Button
+                variant="contained"
+                startIcon={<WhatsAppIcon style={{ marginRight: "3px" }} />}
+                sx={{ width: "fit-content" }}
+                href={generateWhatsappLink(
+                  "5512992485894",
+                  "Olá! Preciso do auxílio de um Advogado."
+                )}
+              >
+                Fale comigo
+              </Button>
+            </Box>
           </Stack>
         </Grid>
 
@@ -165,20 +170,27 @@ const MainSectionMobile: React.FC = () => {
           sx={{ color: "gray", textAlign: "center" }} // Alinhamento à esquerda
         >
           Você infelizmente deve estar enfrentando um momento delicado e o
-          processo de divórcio pode ser complicado e demorado.
+          processo de divórcio pode ser complicado e demorado!
         </Typography>
         <Typography
           variant="body2" // Ajustei o tamanho da fonte
           sx={{ color: "gray", textAlign: "center" }} // Alinhamento à esquerda
         >
           A nossa equipe de advogados está pronta para auxiliar você nesse
-          momento, garantindo seus direitos e protegendo o que é mais importante
-          para você.
+          momento, garantindo seus direitos e protegendo aquilo que é mais
+          valioso para você.
         </Typography>
 
         {/* Botão de contato */}
-        <Button variant="contained" startIcon={<WhatsAppIcon />} href="https://wa.me/5512992485894">
-          Agende uma reunião sem compromisso
+        <Button
+          variant="contained"
+          startIcon={<WhatsAppIcon />}
+          href={generateWhatsappLink(
+            "5512992485894",
+            "Olá! Preciso do auxílio de um Advogado."
+          )}
+        >
+          Fale comigo
         </Button>
       </Stack>
     </Box>
