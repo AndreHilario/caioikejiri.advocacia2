@@ -5,7 +5,7 @@ import { generateWhatsappLink } from "../../utils/sendWhatsAppMessage";
 const Header: React.FC = () => {
   return (
     <div
-      className="py-2 px-2 border-b-2 border-b-green-600"
+      className="py-2 px-2 border-b-2 border-b-green-700"
       style={{
         position: "sticky",
         top: 0,
