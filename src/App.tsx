@@ -1,3 +1,4 @@
+import Header from "./components/header/Header";
 import ExplainSection from "./pages/ExplainSection";
 import Footer from "./pages/Footer";
 import MainSection from "./pages/MainSection";
@@ -7,6 +8,7 @@ function App() {
   return (
     <MuiThemeProvider>
       <>
+        <Header />
         <MainSection />
         <ExplainSection />
         <Footer />

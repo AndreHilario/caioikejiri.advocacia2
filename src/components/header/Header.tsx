@@ -1,34 +1,41 @@
 import React from "react";
 import { Stack, Button, Typography } from "@mui/material";
+import { generateWhatsappLink } from "../../utils/sendWhatsAppMessage";
 
 const Header: React.FC = () => {
   return (
     <div
-      className="bg-black py-2 px-2 border-b-2 border-b-green-300"
+      className="py-2 px-2 border-b-2 border-b-green-700"
       style={{
         position: "sticky",
         top: 0,
         zIndex: 1000,
+        backgroundColor: "#2E7D32"
       }}
     >
       <Stack
         direction="row"
         alignItems="center"
         justifyContent="space-between"
-        className="max-w-7xl mx-auto py-1"
+        className="max-w-7xl mx-auto"
         color="#FFFFFF"
       >
-        <Typography variant="h6">Caio Ikejiri | Advogado</Typography>
+        <Typography variant="h6">Caio Alves | Advogado</Typography>
 
         <Button
           variant="contained"
-          href="https://wa.me/5512992485894"
+          href={generateWhatsappLink(
+            "5512992485894",
+            "Olá! Preciso do auxílio de um Advogado."
+          )}
           rel="noopener noreferrer"
           sx={{
-            padding: "8px 16px",
+            bgcolor: "#fff",
+            color: "#000",
+            fontSize: "15px"
           }}
         >
-          Entre em contato
+          Fale comigo
         </Button>
       </Stack>
     </div>
